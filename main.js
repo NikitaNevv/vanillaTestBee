@@ -1,24 +1,41 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+'use strict'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const prevButton = document.querySelector('[data-btn="prevBtn"]');
+const nextButton = document.querySelector('[data-btn="nextBtn"]');
+const sliderBack = document.querySelector(".photo-slider__back");
 
-setupCounter(document.querySelector('#counter'))
+let slideIndex = 0;
+
+showSlide(slideIndex);
+
+prevButton.addEventListener("click", () => changeSlide(-1));
+nextButton.addEventListener("click", () => changeSlide(1));
+
+function changeSlide(n) {
+	showSlide(slideIndex += n);
+}
+
+function showSlide(n) {
+	const slides = document.querySelectorAll(".photo-slider__container img");
+	const counterElem = document.querySelector('.photo-slider__counter')
+
+	const slidersNumber = slides.length;
+
+	if (n >= slides.length) {
+		slideIndex = 0;
+	} else if (n < 0) {
+		slideIndex = slides.length - 1;
+	}
+
+	slides.forEach((slide) => {
+		slide.style.display = "none";
+	});
+
+
+	counterElem.textContent = `${slideIndex + 1} of ${slidersNumber}`;
+	let sourceLink = slides[slideIndex].src;
+	sliderBack.style.backgroundImage = `url(${sourceLink})`;
+	slides[slideIndex].style.display = "block";
+}
+
+

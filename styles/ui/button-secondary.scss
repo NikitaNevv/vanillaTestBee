@@ -1,0 +1,23 @@
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 74px;
+    height: 25px;
+    font-family: $montserrat-font;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1;
+    color: $color-snow;
+    background-color: $color-main-blue;
+    border-radius: 22px;
+    transition-duration: 0.3s;
+
+    &:hover {
+        background-color: rgba(52, 120, 246, 0.8);
+    }
+
+    &:active {
+        background-color: rgba(52, 120, 246, 0.6);
+    }
+}

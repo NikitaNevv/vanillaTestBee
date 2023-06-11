@@ -1,0 +1,30 @@
+.offer-parameter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1;
+        color: $color-secondary-dark;
+    }
+
+    &__comment {
+        font-family: $mulish-font;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 31px;
+        color: $color-text-grey;
+    }
+}
