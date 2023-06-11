@@ -1,0 +1,53 @@
+.user-offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 398px;
+    flex-shrink: 0;
+    padding: 34px 40px 28px;
+    box-shadow: 0 6px 26px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    &__input-box {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        margin-top: 38px;
+        text-align: center;
+        width: max-content;
+    }
+
+    &__currency {
+        font-family: $mulish-font;
+        color: $color-light-blue;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 31px;
+    }
+
+    &__input {
+        display: flex;
+        font-family: $mulish-font;
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 100px;
+        color: $color-light-blue;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        text-align: center;
+        max-width: 300px;
+
+        &::placeholder {
+            color: $color-light-blue;
+            opacity: 1;
+        }
+    }
+
+}
