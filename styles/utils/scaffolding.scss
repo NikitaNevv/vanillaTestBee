@@ -18,8 +18,9 @@ button {
     background: none;
 }
 
-p {
+p, fieldset, legend {
     margin: 0;
+    padding: 0;
 }
 
 .wrapper {
