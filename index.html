@@ -121,7 +121,7 @@
         </div>
 
         <div class="client-options__quick-question">
-            <div class="client-options__quick-question-initial">
+            <div class="client-options__quick-question-initial" data-atr="toSend">
                 <div class="client-options__quick-question-top">
                     <div class="client-options__quick-question-icon"></div>
 
@@ -133,10 +133,25 @@
 
                     <button
                         class="btn-main btn-main-size--medium client-options__quick-question-btn"
+                        data-btn="toSend"
                     >
                         Send
                     </button>
                 </div>
+            </div>
+
+            <div class="client-options__is-sent" data-atr="isSent">
+                <div class="client-options__is-sent-box">
+                    <span class="client-options__is-sent-icon icon icon--success"></span>
+
+                    <p class="client-options__is-sent-text">Message sent.</p>
+                </div>
+
+                <button
+                    class="btn-main btn-main-size--medium btn-main-theme--secondary"
+                >
+                    See conversation
+                </button>
             </div>
         </div>
 
@@ -172,76 +187,102 @@
     </div>
 
     <div class="user-offer">
-        <p class="user-offer__title">Your Offer</p>
+        <div class="user-offer__initial" data-atr="composeOffer">
 
-        <div class="user-offer__input-box">
-            <span class="user-offer__currency">$</span>
+            <p class="user-offer__title">Your Offer</p>
 
-            <input
-                class="user-offer__input"
-                type="text"
-                size="1"
-                placeholder="0"
-                data-input="offer"
-            >
-        </div>
+            <div class="user-offer__input-box">
+                <span class="user-offer__currency">$</span>
 
-        <div class="user-offer__box">
-            <div class="select-main">
-                <span class="select-main__legend">How long will it take </span>
-                <span class="select-main__arrow icon icon--arrow-down"></span>
-                <div class="select-main__box">
-                    <div class="select-main__selected">Select time</div>
-                    <div class="select-main__options">
-                        <div class="select-main__option">00:15 hr</div>
-                        <div class="select-main__option">00:30 hr</div>
-                        <div class="select-main__option">00:45 hr</div>
-                        <div class="select-main__option">00:45 hr</div>
-                        <div class="select-main__option">00:45 hr</div>
-                        <div class="select-main__option">00:45 hr</div>
-                        <div class="select-main__option">00:45 hr</div>
-                        <div class="select-main__option">00:45 hr</div>
-                        <div class="select-main__option">00:45 hr</div>
-                    </div>
-                </div>
+                <input
+                    class="user-offer__input"
+                    type="text"
+                    size="1"
+                    placeholder="0"
+                    data-input="offer"
+                >
             </div>
 
-            <label class="toggle-btn page-main__toggle-btn">
-                <span class="toggle-btn__text-1">Parts and labor</span>
-                <span class="toggle-btn__text-2">Labor only</span>
-                <input type="checkbox" class="toggle-btn__inp">
-                <span class="toggle-btn__movable-box"></span>
-            </label>
-        </div>
+            <div class="user-offer__box">
+                <div class="select-main">
+                    <span class="select-main__legend">How long will it take </span>
+                    <span class="select-main__arrow icon icon--arrow-down"></span>
+                    <div class="select-main__box">
+                        <div class="select-main__selected">Select time</div>
+                        <div class="select-main__options">
+                            <div class="select-main__option">00:15 hr</div>
+                            <div class="select-main__option">00:30 hr</div>
+                            <div class="select-main__option">00:45 hr</div>
+                            <div class="select-main__option">00:45 hr</div>
+                            <div class="select-main__option">00:45 hr</div>
+                            <div class="select-main__option">00:45 hr</div>
+                            <div class="select-main__option">00:45 hr</div>
+                            <div class="select-main__option">00:45 hr</div>
+                            <div class="select-main__option">00:45 hr</div>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="user-offer__textarea-box">
-            <span class="user-offer__textarea-legend">Message</span>
-            <textarea class="user-offer__textarea"></textarea>
-        </div>
+                <label class="toggle-btn page-main__toggle-btn">
+                    <span class="toggle-btn__text-1">Parts and labor</span>
+                    <span class="toggle-btn__text-2">Labor only</span>
+                    <input type="checkbox" class="toggle-btn__inp">
+                    <span class="toggle-btn__movable-box"></span>
+                </label>
+            </div>
 
-        <div class="user-offer__warranty">
-            <a class="user-offer__warranty-link" href="#">Warranty</a>
+            <div class="user-offer__textarea-box">
+                <span class="user-offer__textarea-legend">Message</span>
+                <textarea class="user-offer__textarea"></textarea>
+            </div>
 
-            <div class="user-offer__warranty-select-container">
-                <div class="select-secondary ">
-                    <span class="select-secondary__arrow icon icon--arrow-down"></span>
-                    <div class="select-secondary__box">
-                        <div class="select-secondary__selected">30 days</div>
-                        <div class="select-secondary__options">
-                            <div class="select-secondary__option">30 days </div>
-                            <div class="select-secondary__option">90 days </div>
-                            <div class="select-secondary__option">6 mo </div>
-                            <div class="select-secondary__option">1 year </div>
-                            <div class="select-secondary__option">Unlimited</div>
+            <div class="user-offer__warranty">
+                <a class="user-offer__warranty-link" href="#">Warranty</a>
+
+                <div class="user-offer__warranty-select-container">
+                    <div class="select-secondary ">
+                        <span class="select-secondary__arrow icon icon--arrow-down"></span>
+                        <div class="select-secondary__box">
+                            <div class="select-secondary__selected">30 days</div>
+                            <div class="select-secondary__options">
+                                <div class="select-secondary__option">30 days </div>
+                                <div class="select-secondary__option">90 days </div>
+                                <div class="select-secondary__option">6 mo </div>
+                                <div class="select-secondary__option">1 year </div>
+                                <div class="select-secondary__option">Unlimited</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <button class="btn-main btn-main-size--large user-offer__btn" data-btn="toSendOffer">
+                Make offer
+            </button>
         </div>
 
-        <button class="btn-main btn-main-size--large user-offer__btn">
-            Make offer
-        </button>
+
+        <div class="user-offer__offer-success" data-atr="offerSuccess">
+             <span class="user-offer__offer-success-icon icon icon--success"></span>
+
+            <p class="user-offer__offer-success-title">Offer sent!</p>
+
+            <span class="user-offer__offer-success-box">
+                <span class="user-offer__offer-success-currency">$</span>
+                <span class="user-offer__offer-success-price">90</span>
+            </span>
+
+            <span class="user-offer__offer-success-smile icon icon--happy-smile"></span>
+
+            <p class="user-offer__offer-success-text">
+                Excellent chances • Time: 3 days
+                Parts and Labor • 30 days Warranty
+            </p>
+
+            <button class="user-offer__offer-success-btn" data-btn="editOffer">
+                Edit
+            </button>
+        </div>
     </div>
 </div>
 

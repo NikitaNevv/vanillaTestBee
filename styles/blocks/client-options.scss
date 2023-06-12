@@ -116,4 +116,27 @@
         gap: 40px;
         margin-top: 50px;
     }
+
+    &__is-sent {
+        display: none;
+        flex-direction: column;
+        gap: 13px;
+
+        &-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        &-icon {
+            width: 19px;
+            height: 19px;
+        }
+
+        &-text {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 1;
+        }
+    }
 }

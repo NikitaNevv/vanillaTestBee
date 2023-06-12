@@ -8,6 +8,13 @@
     box-shadow: 0 6px 26px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
 
+    &__initial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
     &__title {
         font-weight: 600;
         font-size: 20px;
@@ -118,10 +125,83 @@
         &-select-container {
             position: relative;
             width: 100px;
+            height: max-content;
         }
     }
 
     &__btn {
         margin-top: 20px;
+    }
+
+    &__offer-success {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        &-icon {
+            width: 40px;
+            height: 40px;
+            margin-top: 76px;
+        }
+
+        &-title {
+            margin-top: 16px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &-box {
+            display: flex;
+            gap: 10px;
+            margin-top: 78px;
+        }
+
+        &-currency {
+            color: $color-light-blue;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 31px;
+        }
+
+        &-price {
+            font-family: $mulish-font;
+            color: $color-light-blue;
+            font-weight: 400;
+            font-size: 80px;
+            line-height: 100px;
+        }
+
+        &-smile {
+            margin-top: 78px;
+            width: 20px;
+            height: 20px;
+        }
+
+        &-text {
+            margin-top: 10px;
+            text-align: center;
+            width: 300px;
+            color: $color-text-grey;
+            font-size: 14px;
+            line-height: 15px;
+        }
+
+        &-btn {
+            font-family: $montserrat-font;
+            margin-top: 143px;
+            color: $color-light-blue;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1;
+
+            &:hover {
+                color: rgba(57, 126, 255, 0.8);
+            }
+
+            &:active {
+                color: rgba(57, 126, 255, 0.6);
+            }
+        }
     }
 }

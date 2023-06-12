@@ -4,6 +4,10 @@ const prevButton = document.querySelector('[data-btn="prevBtn"]');
 const nextButton = document.querySelector('[data-btn="nextBtn"]');
 const sliderBack = document.querySelector(".photo-slider__back");
 
+const toSendBox = document.querySelector('[data-atr="toSend"]');
+const isSentBox = document.querySelector('[data-atr="isSent"]');
+const toSendBtn = document.querySelector('[data-btn="toSend"]');
+
 const offerInput = document.querySelector('[data-input="offer"]')
 
 const toggleCheckbox = document.querySelector('.toggle-btn__inp');
@@ -19,6 +23,7 @@ window.onload = function() {
 	offerInput.value = '';
 	document.querySelector('.select-main__options').style.display = 'none';
 	document.querySelector('.select-secondary__options').style.display = 'none';
+	document.querySelector('.user-offer__textarea').value  = '';
 };
 
 showSlide(slideIndex);
@@ -66,6 +71,7 @@ offerInput.addEventListener("input", function() {
 });
 
 document.querySelector(".select-main__selected").addEventListener("click", function() {
+
 	let options = this.nextElementSibling;
 	options.style.display = options.style.display === "none" ? "block" : "none";
 });
@@ -111,6 +117,8 @@ textarea.addEventListener('input', function() {
 
 document.querySelector(".select-secondary__selected").addEventListener("click", function() {
 	let options = this.nextElementSibling;
+
+	document.querySelector(".select-secondary__box").style.borderColor = '#cbd8f3'
 	options.style.display = options.style.display === "none" ? "block" : "none";
 });
 
@@ -125,5 +133,26 @@ secondaryOptions.forEach(function(option) {
 		document.querySelector(".select-secondary__selected").dataset.value = selectedValue;
 
 		this.parentElement.style.display = "none";
+		document.querySelector(".select-secondary__box").style.borderColor = ''
 	});
 });
+
+toSendBtn.addEventListener('click', () => {
+	toSendBox.style.display = 'none';
+	isSentBox.style.display = 'flex';
+})
+
+const composeOfferSection = document.querySelector('[data-atr="composeOffer"]');
+const offerIsSentSection = document.querySelector('[data-atr="offerSuccess"]');
+const editOfferBtn = document.querySelector('[data-btn="editOffer"]');
+const makeOfferBtn = document.querySelector('[data-btn="toSendOffer"]');
+
+makeOfferBtn.addEventListener('click', () => {
+	composeOfferSection.style.display = 'none';
+	offerIsSentSection.style.display = 'flex';
+})
+
+editOfferBtn.addEventListener('click', () => {
+	composeOfferSection.style.display = 'flex';
+	offerIsSentSection.style.display = 'none';
+})
