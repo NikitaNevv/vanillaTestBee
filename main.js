@@ -10,13 +10,15 @@ const toggleCheckbox = document.querySelector('.toggle-btn__inp');
 const toggleElement = document.querySelector('.toggle-btn__movable-box');
 const toggleBtn = document.querySelector('.toggle-btn');
 const text1 = document.querySelector('.toggle-btn__text-1');
-
+const textarea = document.querySelector('.user-offer__textarea');
 let slideIndex = 0;
 
 window.onload = function() {
 	toggleCheckbox.checked = true;
 	offerInput.placeholder = "0";
 	offerInput.value = '';
+	document.querySelector('.select-main__options').style.display = 'none';
+	document.querySelector('.select-secondary__options').style.display = 'none';
 };
 
 showSlide(slideIndex);
@@ -69,6 +71,7 @@ document.querySelector(".select-main__selected").addEventListener("click", funct
 });
 
 let options = document.querySelectorAll(".select-main__option");
+
 options.forEach(function(option) {
 	option.addEventListener("click", function() {
 		let selectedText = this.textContent;
@@ -82,7 +85,7 @@ options.forEach(function(option) {
 });
 
 toggleBtn.addEventListener('click', function() {
-	toggleElement.style.left = '48%';
+	toggleElement.style.left = '49%';
 	toggleBtn.classList.add('toggle-btn--selected');
 	text1.style.color = '#111111';
 
@@ -91,9 +94,36 @@ toggleBtn.addEventListener('click', function() {
 	}
 
 	if (toggleCheckbox.checked) {
-		toggleElement.style.left = '2%';
+		toggleElement.style.left = '1%';
 		toggleBtn.classList.remove('toggle-btn--selected');
 		text1.removeAttribute('style');
 		text1.style.fontWeight = '600';
 	}
+});
+
+textarea.addEventListener('input', function() {
+	let text = textarea.value;
+
+	if (text.length > 140) {
+		textarea.value = text.slice(0, 140);
+	}
+});
+
+document.querySelector(".select-secondary__selected").addEventListener("click", function() {
+	let options = this.nextElementSibling;
+	options.style.display = options.style.display === "none" ? "block" : "none";
+});
+
+let secondaryOptions = document.querySelectorAll(".select-secondary__option");
+
+secondaryOptions.forEach(function(option) {
+	option.addEventListener("click", function() {
+		let selectedText = this.textContent;
+		let selectedValue = this.textContent;
+
+		document.querySelector(".select-secondary__selected").textContent = selectedText;
+		document.querySelector(".select-secondary__selected").dataset.value = selectedValue;
+
+		this.parentElement.style.display = "none";
+	});
 });

@@ -150,13 +150,13 @@
             <div class="offer-parameter">
                 <span class="offer-parameter__icon icon icon--urgent"></span>
 
-                <p class="offer-parameters__text">Urgent </p>
+                <p class="offer-parameters__text">Not drivable</p>
             </div>
 
             <div class="offer-parameter">
                 <span class="offer-parameter__icon icon icon--not-drivable"></span>
 
-                <p class="offer-parameters__text">Urgent </p>
+                <p class="offer-parameters__text">Urgent</p>
             </div>
 
             <div class="offer-parameter">
@@ -186,32 +186,67 @@
             >
         </div>
 
-        <div class="select-main page-main__select-main">
-            <span class="select-main__legend">How long will it take </span>
-            <span class="select-main__arrow icon icon--arrow-down"></span>
-            <div class="select-main__box">
-                <div class="select-main__selected">Select time</div>
-                <div class="select-main__options">
-                    <div class="select-main__option">00:15 hr</div>
-                    <div class="select-main__option">00:30 hr</div>
-                    <div class="select-main__option">00:45 hr</div>
-                    <div class="select-main__option">00:45 hr</div>
-                    <div class="select-main__option">00:45 hr</div>
-                    <div class="select-main__option">00:45 hr</div>
-                    <div class="select-main__option">00:45 hr</div>
-                    <div class="select-main__option">00:45 hr</div>
-                    <div class="select-main__option">00:45 hr</div>
+        <div class="page-main__box">
+            <div class="select-main">
+                <span class="select-main__legend">How long will it take </span>
+                <span class="select-main__arrow icon icon--arrow-down"></span>
+                <div class="select-main__box">
+                    <div class="select-main__selected">Select time</div>
+                    <div class="select-main__options">
+                        <div class="select-main__option">00:15 hr</div>
+                        <div class="select-main__option">00:30 hr</div>
+                        <div class="select-main__option">00:45 hr</div>
+                        <div class="select-main__option">00:45 hr</div>
+                        <div class="select-main__option">00:45 hr</div>
+                        <div class="select-main__option">00:45 hr</div>
+                        <div class="select-main__option">00:45 hr</div>
+                        <div class="select-main__option">00:45 hr</div>
+                        <div class="select-main__option">00:45 hr</div>
+                    </div>
+                </div>
+            </div>
+
+            <label class="toggle-btn page-main__toggle-btn">
+                <span class="toggle-btn__text-1">Parts and labor</span>
+                <span class="toggle-btn__text-2">Labor only</span>
+                <input type="checkbox" class="toggle-btn__inp">
+                <span class="toggle-btn__movable-box"></span>
+            </label>
+        </div>
+
+        <div class="user-offer__textarea-box">
+            <span class="user-offer__textarea-legend">Message</span>
+            <textarea class="user-offer__textarea"></textarea>
+        </div>
+
+        <div class="user-offer__warranty">
+            <a class="user-offer__warranty-link" href="#">Warranty</a>
+
+            <div class="user-offer__warranty-select-container">
+                <div class="select-secondary select-secondary--position">
+                    <span class="select-secondary__arrow icon icon--arrow-down"></span>
+                    <div class="select-secondary__box">
+                        <div class="select-secondary__selected">30 days</div>
+                        <div class="select-secondary__options">
+                            <div class="select-secondary__option">30 days </div>
+                            <div class="select-secondary__option">90 days </div>
+                            <div class="select-secondary__option">6 mo </div>
+                            <div class="select-secondary__option">1 year </div>
+                            <div class="select-secondary__option">Unlimited</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <label class="toggle-btn page-main__toggle-btn">
-            <span class="toggle-btn__text-1">Parts and labor</span>
-            <span class="toggle-btn__text-2">Labor only</span>
-            <input type="checkbox" class="toggle-btn__inp">
-            <span class="toggle-btn__movable-box"></span>
-        </label>
+        <button class="btn-main btn-main-size--large user-offer__btn">
+            Make offer
+        </button>
     </div>
+</div>
+
+<div class="map-info">
+
 </div>
 </body>
 </html>
