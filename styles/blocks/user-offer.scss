@@ -28,11 +28,27 @@
         margin-top: 38px;
         text-align: center;
         width: max-content;
+        color: $color-light-blue;
+    }
+
+    &__chance {
+        display: none;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 36px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 1;
+
+        &-icon {
+            width: 20px;
+            height: 20px;
+        }
     }
 
     &__currency {
         font-family: $mulish-font;
-        color: $color-light-blue;
         font-weight: 700;
         font-size: 25px;
         line-height: 31px;
@@ -44,12 +60,12 @@
         font-weight: 400;
         font-size: 80px;
         line-height: 100px;
-        color: $color-light-blue;
         background-color: transparent;
         outline: none;
         border: none;
         text-align: center;
         max-width: 300px;
+        color: inherit;
 
         &::placeholder {
             color: $color-light-blue;

@@ -10,11 +10,22 @@ const toSendBtn = document.querySelector('[data-btn="toSend"]');
 
 const offerInput = document.querySelector('[data-input="offer"]')
 
+const composeOfferSection = document.querySelector('[data-atr="composeOffer"]');
+const offerIsSentSection = document.querySelector('[data-atr="offerSuccess"]');
+const editOfferBtn = document.querySelector('[data-btn="editOffer"]');
+const makeOfferBtn = document.querySelector('[data-btn="toSendOffer"]');
+
 const toggleCheckbox = document.querySelector('.toggle-btn__inp');
 const toggleElement = document.querySelector('.toggle-btn__movable-box');
 const toggleBtn = document.querySelector('.toggle-btn');
 const text1 = document.querySelector('.toggle-btn__text-1');
 const textarea = document.querySelector('.user-offer__textarea');
+
+const inputPriceBox = document.querySelector('[data-atr="inputBox"]');
+const averageChance = document.querySelector('[data-chance="average"]');
+const goodChance = document.querySelector('[data-chance="good"]');
+const badChance = document.querySelector('[data-chance="bad"]');
+
 let slideIndex = 0;
 
 window.onload = function() {
@@ -142,11 +153,6 @@ toSendBtn.addEventListener('click', () => {
 	isSentBox.style.display = 'flex';
 })
 
-const composeOfferSection = document.querySelector('[data-atr="composeOffer"]');
-const offerIsSentSection = document.querySelector('[data-atr="offerSuccess"]');
-const editOfferBtn = document.querySelector('[data-btn="editOffer"]');
-const makeOfferBtn = document.querySelector('[data-btn="toSendOffer"]');
-
 makeOfferBtn.addEventListener('click', () => {
 	composeOfferSection.style.display = 'none';
 	offerIsSentSection.style.display = 'flex';
@@ -155,4 +161,29 @@ makeOfferBtn.addEventListener('click', () => {
 editOfferBtn.addEventListener('click', () => {
 	composeOfferSection.style.display = 'flex';
 	offerIsSentSection.style.display = 'none';
+})
+
+offerInput.addEventListener('input', (event) => {
+	let value = parseInt(event.target.value);
+
+	if (value < 300 && value) {
+		badChance.style.display = 'flex';
+		averageChance.style.display = 'none';
+		goodChance.style.display = 'none';
+		inputPriceBox.style.color = '#ff7437';
+	}
+
+	if (value < 800 && value && value >= 400) {
+		badChance.style.display = 'none';
+		averageChance.style.display = 'none';
+		goodChance.style.display = 'flex';
+		inputPriceBox.style.color = '#29f8ac';
+	}
+
+	if (value >= 800 && value) {
+		badChance.style.display = 'none';
+		averageChance.style.display = 'flex';
+		goodChance.style.display = 'none';
+		inputPriceBox.style.color = '#a7b1bf';
+	}
 })

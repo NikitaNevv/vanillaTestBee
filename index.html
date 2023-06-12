@@ -99,7 +99,9 @@
 
         <p class="client-options__model">4 cyl. Hybrid A-Spec</p>
 
-        <p class="client-options__comment">I dont know whats wrong with it, just need it to be fixed asap!</p>
+        <p class="client-options__comment">
+            I dont know whats wrong with it, just need it to be fixed asap!
+        </p>
 
         <div class="client-options__client-box">
             <div class="client-options__client-info">
@@ -147,9 +149,7 @@
                     <p class="client-options__is-sent-text">Message sent.</p>
                 </div>
 
-                <button
-                    class="btn-main btn-main-size--medium btn-main-theme--secondary"
-                >
+                <button class="btn-main btn-main-size--medium btn-main-theme--secondary">
                     See conversation
                 </button>
             </div>
@@ -191,7 +191,7 @@
 
             <p class="user-offer__title">Your Offer</p>
 
-            <div class="user-offer__input-box">
+            <div class="user-offer__input-box" data-atr="inputBox">
                 <span class="user-offer__currency">$</span>
 
                 <input
@@ -203,12 +203,33 @@
                 >
             </div>
 
+            <div class="user-offer__chance" data-chance="average">
+                <span class="user-offer__chance-icon icon icon--average-chance"></span>
+
+                <span>Average chances</span>
+            </div>
+
+            <div class="user-offer__chance" data-chance="good">
+                <span class="user-offer__chance-icon icon icon--good-chance"></span>
+
+                <span>Good chances</span>
+            </div>
+
+            <div class="user-offer__chance" data-chance="bad">
+                <span class="user-offer__chance-icon icon icon--bad-chance"></span>
+
+                <span>Bad chances</span>
+            </div>
+
             <div class="user-offer__box">
                 <div class="select-main">
                     <span class="select-main__legend">How long will it take </span>
+
                     <span class="select-main__arrow icon icon--arrow-down"></span>
+
                     <div class="select-main__box">
                         <div class="select-main__selected">Select time</div>
+
                         <div class="select-main__options">
                             <div class="select-main__option">00:15 hr</div>
                             <div class="select-main__option">00:30 hr</div>
@@ -242,13 +263,15 @@
                 <div class="user-offer__warranty-select-container">
                     <div class="select-secondary ">
                         <span class="select-secondary__arrow icon icon--arrow-down"></span>
+
                         <div class="select-secondary__box">
                             <div class="select-secondary__selected">30 days</div>
+
                             <div class="select-secondary__options">
-                                <div class="select-secondary__option">30 days </div>
-                                <div class="select-secondary__option">90 days </div>
-                                <div class="select-secondary__option">6 mo </div>
-                                <div class="select-secondary__option">1 year </div>
+                                <div class="select-secondary__option">30 days</div>
+                                <div class="select-secondary__option">90 days</div>
+                                <div class="select-secondary__option">6 mo</div>
+                                <div class="select-secondary__option">1 year</div>
                                 <div class="select-secondary__option">Unlimited</div>
                             </div>
                         </div>
@@ -263,7 +286,7 @@
 
 
         <div class="user-offer__offer-success" data-atr="offerSuccess">
-             <span class="user-offer__offer-success-icon icon icon--success"></span>
+            <span class="user-offer__offer-success-icon icon icon--success"></span>
 
             <p class="user-offer__offer-success-title">Offer sent!</p>
 

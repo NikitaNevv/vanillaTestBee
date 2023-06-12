@@ -46,4 +46,16 @@
     &--happy-smile {
         background-image: url("../assets/happy-smile.svg");
     }
+
+    &--average-chance {
+        background-image: url("../assets/averageChanceSmile.svg");
+    }
+
+    &--good-chance {
+        background-image: url("../assets/goodChanceSmile.svg");
+    }
+
+    &--bad-chance {
+        background-image: url("../assets/badChanceSmile.svg");
+    }
 }
