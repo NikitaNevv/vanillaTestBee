@@ -1,0 +1,72 @@
+.select-main {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+
+    &--font {
+        font-size: 13px;
+    }
+
+    &__box {
+        position: relative;
+        border: 1px solid $color-stroke-grey;
+        border-radius: 12px;
+        width: 100%;
+        overflow: hidden;
+
+        &--border {
+            border: none;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 22px;
+        width: 10px;
+        height: 6px;
+    }
+
+    &__legend {
+        position: absolute;
+        left: 24px;
+        top: -6px;
+        z-index: 2;
+        padding: 0 4px;
+        color: $color-text-grey;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1;
+        background-color: $color-snow;
+    }
+
+    &__selected {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        padding: 0 10px;
+        background-color: transparent;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &__options {
+        display: none;
+        max-height: 150px;
+        overflow-y: auto;
+        background-color: $color-snow;
+    }
+
+    &__option {
+        padding: 8px 16px;
+        background-color: $color-snow;
+        cursor: pointer;
+        border-radius: 12px;
+
+        &:hover {
+            background-color: $color-light-select;
+        }
+    }
+}

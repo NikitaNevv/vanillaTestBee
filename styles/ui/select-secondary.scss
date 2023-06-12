@@ -1,0 +1,62 @@
+.select-secondary {
+    min-width: 100px;
+    position: absolute;
+    z-index: 2;
+    font-size: 13px;
+
+    &--position {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    &__box {
+        position: relative;
+        border-radius: 12px;
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid transparent;
+        transition-duration: 0.3s;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 0;
+        width: 6px;
+        height: 4px;
+    }
+
+    &__selected {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 22px;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &__options {
+        display: none;
+        background-color: $color-snow;
+        border-radius: 12px;
+    }
+
+    &__option {
+        padding: 8px 16px;
+        background-color: $color-snow;
+        cursor: pointer;
+        border-radius: 12px;
+        min-width: 100px;
+        text-align: center;
+        user-select: none;
+
+        &:hover {
+            background-color: $color-light-select;
+        }
+    }
+}
+

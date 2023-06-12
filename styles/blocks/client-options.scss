@@ -1,0 +1,142 @@
+.client-options {
+    &__title {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 1;
+    }
+
+    &__model {
+        font-family: $mulish-font;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 31px;
+        color: $color-text-grey;
+    }
+
+    &__comment {
+        margin-top: 16px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 15px;
+        color: $color-text-grey;
+    }
+
+    &__client-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 34px;
+    }
+
+    &__client-info {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        cursor: pointer;
+
+        &-box {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        &-title {
+            font-family: $montserrat-font;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        &-role {
+            font-family: $mulish-font;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1;
+            color: $color-main-grey;
+        }
+
+        &-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 100px;
+        }
+    }
+
+    &__quick-question {
+        margin-top: 34px;
+        padding: 16px 14px;
+        box-shadow: 0 6px 26px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+
+        &-top {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        &-icon {
+            color: $color-main-blue;
+        }
+
+        &-text {
+            font-family: $montserrat-font;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        &-input-box {
+            display: flex;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        &-input {
+            flex-grow: 3;
+            height: 34px;
+            border-radius: 21px;
+            width: 100%;
+            padding: 0 14px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            background-color: $color-light-grey;
+        }
+
+        &-btn {
+            flex-basis: 20%;
+        }
+    }
+
+    &__offer-params {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 50px;
+    }
+
+    &__is-sent {
+        display: none;
+        flex-direction: column;
+        gap: 13px;
+
+        &-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        &-icon {
+            width: 19px;
+            height: 19px;
+        }
+
+        &-text {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 1;
+        }
+    }
+}

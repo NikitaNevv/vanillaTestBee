@@ -1,0 +1,61 @@
+.icon {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &--arrow-left {
+        background-image: url("../assets/left-arrow.png");
+    }
+
+    &--arrow-right {
+        background-image: url("../assets/right-arrow.png");
+    }
+
+    &--slider-icon {
+        background-image: url("../assets/slider-icon.svg");
+    }
+
+    &--mechanic {
+        background-image: url("../assets/mobile-mechanic.svg");
+    }
+
+    &--urgent {
+        background-image: url("../assets/urgent.svg");
+    }
+
+    &--not-drivable {
+        background-image: url("../assets/not-drivable.svg");
+    }
+
+    &--own-parts {
+        background-image: url("../assets/own-parts.svg");
+    }
+
+    &--arrow-down {
+        background-image: url("../assets/arrow-down.svg");
+    }
+
+    &--map-point {
+        background-image: url("../assets/map-point.svg");
+    }
+
+    &--success {
+        background-image: url("../assets/success.png");
+    }
+
+    &--happy-smile {
+        background-image: url("../assets/happy-smile.svg");
+    }
+
+    &--average-chance {
+        background-image: url("../assets/averageChanceSmile.svg");
+    }
+
+    &--good-chance {
+        background-image: url("../assets/goodChanceSmile.svg");
+    }
+
+    &--bad-chance {
+        background-image: url("../assets/badChanceSmile.svg");
+    }
+}

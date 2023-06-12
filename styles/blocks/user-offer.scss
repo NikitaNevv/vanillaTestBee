@@ -1,0 +1,223 @@
+.user-offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 398px;
+    flex-shrink: 0;
+    padding: 34px 40px 28px;
+    box-shadow: 0 6px 26px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+
+    &__initial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    &__input-box {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        margin-top: 38px;
+        text-align: center;
+        width: max-content;
+        color: $color-light-blue;
+    }
+
+    &__chance {
+        display: none;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 36px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 1;
+
+        &-icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__currency {
+        font-family: $mulish-font;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 31px;
+    }
+
+    &__input {
+        display: flex;
+        font-family: $mulish-font;
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 100px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        text-align: center;
+        max-width: 300px;
+        color: inherit;
+
+        &::placeholder {
+            color: $color-light-blue;
+            opacity: 1;
+        }
+    }
+
+    &__box {
+        position: relative;
+        width: 100%;
+        margin-top: 48px;
+    }
+
+    &__textarea-box {
+        position: relative;
+        width: 100%;
+        height: 155px;
+        margin-top: 33px;
+        border: 1px solid $color-stroke-grey;
+        border-radius: 12px;
+    }
+
+    &__textarea-legend {
+        position: absolute;
+        left: 24px;
+        top: -7px;
+        z-index: 1;
+        padding: 0 4px;
+        color: $color-text-grey;
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 500;
+        background-color: $color-snow;
+    }
+
+    &__textarea {
+        position: absolute;
+        width: 100%;
+        height: 99%;
+        padding: 14px;
+        border: none;
+        border-radius: 12px;
+        resize: none;
+        outline: none;
+        font-family: $montserrat-font;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__warranty {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 24px;
+
+        &-link {
+            text-decoration: none;
+            color: $color-secondary-blue;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 22px;
+
+            &:hover {
+                color: rgba(15, 105, 221, 0.8);
+            }
+
+            &:active {
+                color: rgba(15, 105, 221, 0.6);
+            }
+        }
+
+        &-select-container {
+            position: relative;
+            width: 100px;
+            height: max-content;
+        }
+    }
+
+    &__btn {
+        margin-top: 20px;
+    }
+
+    &__offer-success {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        &-icon {
+            width: 40px;
+            height: 40px;
+            margin-top: 76px;
+        }
+
+        &-title {
+            margin-top: 16px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &-box {
+            display: flex;
+            gap: 10px;
+            margin-top: 78px;
+        }
+
+        &-currency {
+            color: $color-light-blue;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 31px;
+        }
+
+        &-price {
+            font-family: $mulish-font;
+            color: $color-light-blue;
+            font-weight: 400;
+            font-size: 80px;
+            line-height: 100px;
+        }
+
+        &-smile {
+            margin-top: 78px;
+            width: 20px;
+            height: 20px;
+        }
+
+        &-text {
+            margin-top: 10px;
+            text-align: center;
+            width: 300px;
+            color: $color-text-grey;
+            font-size: 14px;
+            line-height: 15px;
+        }
+
+        &-btn {
+            font-family: $montserrat-font;
+            margin-top: 143px;
+            color: $color-light-blue;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1;
+
+            &:hover {
+                color: rgba(57, 126, 255, 0.8);
+            }
+
+            &:active {
+                color: rgba(57, 126, 255, 0.6);
+            }
+        }
+    }
+}

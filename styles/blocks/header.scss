@@ -1,0 +1,117 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    padding: 0 30px;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        &-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 100%;
+            width: 100px;
+            color: $color-main-grey;
+            transition-duration: 0.3s;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: $color-secondary-blue;
+                transform-origin: bottom right;
+                transition: transform 0.3s ease-out;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+
+            &:hover {
+                color: $color-secondary-blue;
+            }
+        }
+
+        &-icon  {
+            position: relative;
+            width: 24px;
+            height: 27px;
+        }
+    }
+
+    &__user {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__counter {
+        position: absolute;
+        top: -6px;
+        right: -10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 20px;
+        height: 20px;
+        padding: 2px 6px;
+        font-weight: 500;
+        font-size: 13px;
+        background-color: $color-accent-negative;
+        border-radius: 50px;
+        letter-spacing: 0.2px;
+        color: $color-snow;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+    }
+
+    &__name {
+        font-family: $mulish-font;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    &__role {
+        font-family: $mulish-font;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1;
+        color: $color-main-grey;
+    }
+
+    &__user-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 100px;
+    }
+}
